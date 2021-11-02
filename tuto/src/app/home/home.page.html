@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      JSJargon
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list lines="none">
+      <ion-item *ngFor = "let entry of entries">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ entry.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ entry.description }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+</ion-content>
