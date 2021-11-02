@@ -8,17 +8,14 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-    <ion-list lines="none">
-      <ion-item *ngFor = "let entry of entries">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>{{ entry.name }}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>{{ entry.description }}</p>
-          </ion-card-content>
-        </ion-card>
-      </ion-item>
-    </ion-list>
-</ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ entry.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ entry.description }}</p>
+  </ion-card-content>
+    <ion-button (click)="copy(entry.name, entry.description)">
+      Copy
+    </ion-button>
+</ion-card>
